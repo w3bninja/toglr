@@ -22,8 +22,33 @@
     <li><a href="#popover">Popover</a></li>
   </ul>
 </div>
-
 <div class="container">
+  <h1>Toglr</h1>
+  <p>Toglr is a script that can be used to show and hide elements and groups of elements. </p>
+  <div class="row">
+    <div class="col">
+      <h3>Grouping</h3>
+      <p>Items can be grouped based on a specific container or the full page.</p>
+    </div>
+    <div class="col">
+      <h3>Controls</h3>
+      <p>Each item works with a link that targets the matching container within the group. Each link, Expand, Collapse, Next and Previous are controls that can be used based on the type of component being created.</p>
+    </div>
+    <div class="col">
+      <ol>
+        <li><b>group</b> - The selector of each group.</li>
+        <li><b>closeAll</b> - Allow all containers to be closed.</li>
+        <li><b>addBody</b> - Add active class to the body.</li>
+        <li><b>direction</b> - Add a direction class of left, right, top or bottom.</li>
+        <li><b>full</b> - Add a "full" class.</li>
+        <li><b>actionType</b> - Adjust the action function trigger.</li>
+        <li><b>push</b> - Add "push" classes based on</li>
+      </ol>
+    </div>
+  </div>
+  
+</div>
+<div class="container box">
   <h2 id="edge-container">Edge Container</h2>
   <a href="#e1" class="edge-control">open1</a>
   <div class="edge-container" data-content="e1">
@@ -35,10 +60,11 @@
     <a href="#e2" class="edge-control x"></a>
     menu2
   </div>
+  <pre>$('.edge-control').showhide('body',false,true,'bottom',false,'click',false);</pre>
 </div>
 
 
-<div class="container">
+<div class="container box">
   <h2 id="accordion">Accordions</h2>
   <h4>Vertical</h4>
   <div data-nav="control">
@@ -71,9 +97,10 @@
     <a href="#i4" class="control">text4</a>
     <div data-content="i4">text4 content</div>
   </div>
+  <pre>$('.control').showhide('.accordion',true);</pre>
 </div>
 
-<div class="container">
+<div class="container box">
   <h2 id="tabs">Tabs</h2>
   <h4>Horizontal</h4>
   <div data-nav="set2">
@@ -105,18 +132,20 @@
       <div data-content="i3">text3 content</div>
     </div>
   </div>
+  <pre>$('.control').showhide('.tabs',true);</pre>
 </div>
 
-<div class="container">
+<div class="container box">
   <h2 id="tray">Trays</h2>
   <div class="tray">
     <a href="#i1" class="control">text1</a>
     <div data-content="i1">text1 content</div>
   </div>
+  <pre>$('.control').showhide('.tray');</pre>
 </div>
 
 
-<div class="container">
+<div class="container box">
   <h2 id="slider">Slider</h2>
 <div data-nav="set3">
     <a href="#" class="prev">Previous</a>
@@ -138,9 +167,10 @@
       <a href="#i6" class="control">text6</a>
     </div>
   </div>
+  <pre>$('.control').showhide('.slider',true);</pre>
 </div>
 
-<div class="container">
+<div class="container box">
 <h2 id="dropdown">Dropdown</h2>
   <div class="drop pop-bottom">
     <a href="#i1" class="control">Drop Down</a>
@@ -162,8 +192,10 @@
       <a href="#">Item 5</a>
     </div>
   </div>
+  <pre>
+    $('.control').showhide('.drop',false,false,false,false);</pre>
 </div>
-<div class="container">
+<div class="container box">
   <h2 id="tooltip">Tooltip</h2>
   <div class="tooltip pop-left">
     <a href="#i1" class="control">pop left</a>
@@ -181,9 +213,10 @@
     <a href="#i1" class="control">pop bottom</a>
     <div data-content="i1">text1 content</div>
   </div>
+  <pre>$('.control').showhide('.tooltip',false,false,false,false,'mouseover mouseout');</pre>
 </div>
 
-<div class="container">
+<div class="container box">
 <h2 id="modal">Modal</h2>
   <a href="#m1" class="modal-control">Open Modal</a>
   <div data-content="m1" class="modal">
@@ -192,9 +225,10 @@
       text1 content
     </div>
   </div>
+  <pre>$('.modal-control').showhide('body');</pre>
 </div>
 
-<div class="container">
+<div class="container box">
 <h2 id="popover">Popover</h2>
     <div class="popover pop-left">
       <a href="#i1" class="control">pop left</a>
@@ -212,6 +246,7 @@
       <a href="#i1" class="control">pop bottom</a>
       <div data-content="i1">text1 content</div>
     </div>
+    <pre>$('.control').showhide('.popover',false,false,false,false);</pre>
 </div>
 
 

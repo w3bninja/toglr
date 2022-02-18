@@ -7,13 +7,25 @@ html, body {
 hr {
   margin: 40px 0; }
 
+pre {
+  padding: 10px;
+  background: #EEE;
+  border-radius: 5px;
+  margin-top: 5vh; }
+
+p {
+  max-width: 400px; }
+
 .container {
-  padding: 40px;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   max-width: 1200px;
+  margin: 0 auto; }
+
+.box {
+  padding: 40px;
   margin: 20px auto;
-  height: 80vh; }
+  height: 80vh;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
 
 .navigation {
   position: fixed;
@@ -70,6 +82,11 @@ h2 {
 
 h4 {
   padding-bottom: 10px; }
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .control {
   display: inline-block;
@@ -261,23 +278,22 @@ h4 {
     height: 100%; }
   .edge-container.left {
     top: 0;
-    bottom: 0; }
-    .edge-container.left.closed {
-      left: -270px; }
+    bottom: 0;
+    left: -270px; }
     .edge-container.left.open {
       top: 0;
       bottom: 0;
       left: 0; }
-    .edge-container.left.full.closed {
+    .edge-container.left.full {
       right: 100%;
       left: auto;
       height: 100%;
       width: 100%; }
-    .edge-container.left.full.open {
-      right: 0;
-      left: auto;
-      height: 100%;
-      width: 100%; }
+      .edge-container.left.full.open {
+        right: 0;
+        left: auto;
+        height: 100%;
+        width: 100%; }
   .edge-container.right {
     top: 0;
     bottom: 0;
@@ -297,33 +313,31 @@ h4 {
   .edge-container.top {
     width: 100%;
     height: 270px;
-    overflow: auto;
-    /* override height if using push*/ }
-    .edge-container.top.closed {
-      top: -270px; }
+    left: 0;
+    top: -270px; }
     .edge-container.top.open {
       top: 0; }
-    .edge-container.top.full.closed {
+    .edge-container.top.full {
       bottom: 100%;
       height: 100%;
       top: -100%; }
-    .edge-container.top.full.open {
-      bottom: 0;
-      height: 100%; }
+      .edge-container.top.full.open {
+        bottom: 0;
+        height: 100%; }
   .edge-container.bottom {
-    width: 100%; }
-    .edge-container.bottom.closed {
-      bottom: -270px; }
+    width: 100%;
+    height: 270px;
+    left: 0;
+    bottom: -270px; }
     .edge-container.bottom.open {
-      bottom: 0;
-      height: 100%; }
-    .edge-container.bottom.full.closed {
+      bottom: 0; }
+    .edge-container.bottom.full {
       top: 100%;
       height: 100%;
       bottom: -100%; }
-    .edge-container.bottom.full.open {
-      top: 0;
-      height: 100%; }
+      .edge-container.bottom.full.open {
+        top: 0;
+        height: 100%; }
 
 body {
   position: relative;

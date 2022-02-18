@@ -1,4 +1,5 @@
-.edge-container{position:fixed; z-index: 9999; background: #EEE; width: 270px; overflow:auto; visibility:hidden; display:block; pointer-events:none; @extend .transition;
+$edgeSize:270px;
+.edge-container{position:fixed; z-index: 9999; background: #EEE; width:$edgeSize; overflow:auto; visibility:hidden; display:block; pointer-events:none; @extend .transition;
   &.active{visibility:visible; bottom:0; pointer-events:all; @extend .transition;}
     &::-webkit-scrollbar {width: 10px;} /* width */
     &::-webkit-scrollbar-track {border-radius: 10px;} /* Track */
@@ -6,41 +7,30 @@
     // FULL SCREEN
     &.full {left:0; right:0; width:100%; height:100%;}
     // OPEN LEFT
-    &.left {top:0; bottom:0;
-        &.closed {left:-270px;}
+    &.left {top:0; bottom:0; left:-$edgeSize;
         &.open {top:0; bottom:0; left:0;}
-        &.full{// OPEN LEFT FULL
-            &.closed {right:100%; left:auto; height: 100%; width: 100%;}
+        &.full{right:100%; left:auto; height: 100%; width: 100%; // OPEN LEFT FULL
             &.open {right:0; left:auto; height: 100%; width: 100%;}
         }
     }
-
-
     // OPEN RIGHT
-    &.right {top: 0; bottom:0; right: -270px;
+    &.right {top: 0; bottom:0; right: -$edgeSize;
         &.open {right:0;}
-        &.full{left: 100%; right: auto; height: 100%; width: 100%;// OPEN RIGHT FULL
+        &.full{left: 100%; right: auto; height: 100%; width: 100%; // OPEN RIGHT FULL
             &.open {left: 0; right: auto; height: 100%; width: 100%;}
         }
     }
-
-
-
     // OPEN TOP
-    &.top {width: 100%; height: 270px; overflow: auto;
-        &.closed {top: -270px;}/* override height if using push*/
-        &.open {top: 0;}
-        &.full{// OPEN TOP FULL
-            &.closed {bottom: 100%; height: 100%; top: -100%;}
+    &.top {width:100%; height:$edgeSize; left:0; top:-$edgeSize;
+        &.open {top:0;}
+        &.full{bottom:100%; height:100%; top:-100%; // OPEN TOP FULL
             &.open {bottom: 0; height: 100%;}
         }
     }
     // OPEN BOTTOM
-    &.bottom {width: 100%;
-        &.closed {bottom: -270px;}
-        &.open {bottom: 0; height: 100%;}
-        &.full{// OPEN BOTTOM FULL
-            &.closed {top: 100%; height: 100%; bottom: -100%;}
+    &.bottom {width: 100%; height:$edgeSize; left:0; bottom: -$edgeSize;
+        &.open {bottom: 0;}
+        &.full{top: 100%; height: 100%; bottom: -100%; // OPEN BOTTOM FULL
             &.open {top: 0; height: 100%;}
         }
     }
@@ -49,19 +39,19 @@ body{position: relative;  @extend .transition; -ms-content-zoom-boundary-max: 10
     &.open {overflow: hidden;}
     /* PUSH LEFT */
     &.push-left{left: 0;
-        &.open {left: 270px;}
+        &.open {left:$edgeSize;}
     }
     /* PUSH RIGHT */
     &.push-right{right:0;
-        &.open{right:270px;}
+        &.open{right:$edgeSize;}
     }
     /* PUSH TOP */
     &.push-top {left:0; right:0; top:0;
-        &.open {top: 270px;}
+        &.open {top:$edgeSize;}
     }
     /* PUSH BOTTOM */
     &.push-bottom {left:0; right:0; bottom:0;
-        &.open {bottom: 270px;}
+        &.open {bottom:$edgeSize;}
     }
     //&.open:before {content: " "; position: absolute; width: 100%; height: 100%; cursor: pointer;}
 }

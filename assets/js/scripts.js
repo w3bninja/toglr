@@ -133,7 +133,7 @@ $.fn.showhide = function(group, closeAll, addBody, direction, full, actionType, 
   });
 }
 
-$('.edge-control').showhide('body',false,true,'right',false,'click',true);
+$('.edge-control').showhide('body',false,true,'bottom',false,'click',false);
 $('.control').showhide('.accordion',true);
 $('.control').showhide('.tabs',true);
 $('.control').showhide('.tray');
