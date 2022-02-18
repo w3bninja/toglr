@@ -1,13 +1,14 @@
 // NOTES
 // - Steps/Wizard - Would need to include sets within other sets
 
-$.fn.showhide = function(group, closeAll, addBody, direction, full, actionType) {
+$.fn.showhide = function(group, closeAll, addBody, direction, full, actionType, push) {
   var setGroup = $(group) || $('body');
   var control = $(this);
   var closeAll = closeAll || false;
   var addBody = addBody || false;
   var direction = direction || false;
   var full = full || false;
+  var push = push || false;
   var actionType = actionType || 'click';
  
   $(group).each(function() {
@@ -21,14 +22,23 @@ $.fn.showhide = function(group, closeAll, addBody, direction, full, actionType) 
 
     // CHECK LINK ACTIVE AND SET CONTENT IF ACTIVE
     controlLinks.each(function(){
+      var item = $(this);
+      var itemLink = item.attr("href");
+      var itemValue = itemLink.substr(itemLink.indexOf("#") + 1); // the hash value
+      var content = set.find('[data-content="' + itemValue + '"]');
       if($(this).hasClass('active')){
-        var item = $(this);
-        var itemLink = item.attr("href");
-        var itemValue = itemLink.substr(itemLink.indexOf("#") + 1); // the hash value
-        var content = set.find('[data-content="' + itemValue + '"]');
+        
         content.addClass('active');
         currentItem = controlLinkAll.index(item);
       }
+      if(direction){
+        //alert(direction);
+        content.addClass(direction);
+        if(push){
+          $('body').addClass('push-' + direction);
+        }
+      }
+      
     });
     // ON LINK ACTION
     controlLinks.on(actionType, function(e) {
@@ -44,7 +54,7 @@ $.fn.showhide = function(group, closeAll, addBody, direction, full, actionType) 
         $('body').add(content).toggleClass('open', 'closed');
       }
       if(direction){
-        $('body').add(content).addClass(direction);
+        content.addClass(direction);
       }
       if(full){
         $('body').add(content).addClass('full');
@@ -123,7 +133,7 @@ $.fn.showhide = function(group, closeAll, addBody, direction, full, actionType) 
   });
 }
 
-$('.edge-control').showhide('body',false,true,'right',true);
+$('.edge-control').showhide('body',false,true,'right',false,'click',true);
 $('.control').showhide('.accordion',true);
 $('.control').showhide('.tabs',true);
 $('.control').showhide('.tray');
