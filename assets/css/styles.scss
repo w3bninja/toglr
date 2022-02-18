@@ -1,63 +1,23 @@
-// Scss Document
-
-.transition{transition:all 500ms all;}
-.control{display:inline-block; background:#EEE; padding:10px; transition: all 0.5s ease;
-  &.active{background:#CCC; transition: all 0.5s ease;}
-}
-[data-content]{display:none; opacity:0; transition: all 0.5s ease;
-  &.active{display:block; opacity:1; transition: all 0.5s ease;}
-}
-
-//Accordion
-.accordion{
-  .control{position:relative; display:block; padding-left:30px; transition: all 0.5s ease;
-    &:before, &:after{content:''; display:inline-block; width:10px; height:2px; background:#000; position:absolute; left:10px; top:50%;}
-    &:after{transform:rotate(-90deg);}
-    &.active{
-      &:after{display:none;}
-    }
-  }
-  &.accordion-h{display:flex;
-    [data-content]{flex-grow:1;}
-  }
-}
-//Tabs
-.tabs{
-  .tab-nav{
-    a{display:inline-block; max-width:200px;}
-  }
-  &.tab-v{display:flex;
-    .tab-nav{
-      a{display:block;}
-    }
-  }
-}
-//Tray
-.tray{
-  [data-content]{background:#EEE; padding:0; height:0; min-height:0; overflow:hidden; display:block; opacity:1; 
-    &.active{height:50vh; min-height:300px; overflow:auto;}
-  }
-}
-
-//Slider
-.slider{position:relative; overflow:hidden;
-  .dots{ margin:10px 0;
-    .control{text-indent:-9999px; border-radius:100px; width:15px; height:15px; padding:0;}
-  }
-  [data-content]{width:100%; opacity:0; position:relative; padding:20px; background:#EEE; width:100%; @extend .transition;
-  &.active{opacity:1;}
-  }
-}
-
-
-
-
-
 //DEMO
 html, body{padding:0; margin:0;}
 .container{padding:40px; box-shadow:0 0 10px rgba(0, 0, 0, 0.2);}
-.edge-container{visibility:hidden; pointer-events:none; position:absolute; bottom:100%; background:#EEE; z-index:999; width:100%; height:100%; transition: all 0.5s ease;
-  &.active{visibility:visible; bottom:0; pointer-events:all;} 
-}
 
-.sh-open{overflow:hidden;}
+.transition{transition:all 500ms ease;}
+/* X */
+.x{position:relative; width:15px; height:15px; display:inline-block;}
+.x:before, .x:after{content:" "; position:absolute; top:50%; left:0; background:red; height:1px; width:100%;}
+.x:before{ right:100%; transform:rotate(45deg);}
+.x:after{ right:100%; transform:rotate(135deg);}
+
+@import 
+"toglr",
+"mixins",
+"components/accordion",
+"components/tabs",
+"components/tray",
+"components/popover",
+"components/tooltip",
+"components/drop",
+"components/slider",
+"components/edge-container",
+"components/modal";

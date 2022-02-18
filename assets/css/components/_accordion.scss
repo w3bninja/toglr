@@ -1,0 +1,12 @@
+.accordion{
+    .control{position:relative; display:block; padding-left:30px; @extend .transition;
+        &:before, &:after{content:''; display:inline-block; width:10px; height:2px; background:#000; position:absolute; left:10px; top:50%;}
+        &:after{transform:rotate(-90deg);}
+        &.active{
+        &:after{display:none;}
+        }
+    }
+    &.accordion-h{display:flex;
+        [data-content]{flex-grow:1;}
+    }
+}

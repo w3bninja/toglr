@@ -1,0 +1,12 @@
+.drop{@extend .pop;
+    [data-content]{background:#FFF; padding:10px; border-radius:5px; box-shadow:0 0 10px rgba(0, 0, 0, 0.1); min-width:200px;}
+    a{display:block; padding:10px; border-top:1px solid rgba(0, 0, 0, 0.1);
+        &:first-child{border:0;}
+      }
+      &.pop-top{
+        [data-content]{left:0; transform:none;}
+      }
+      &.pop-bottom{
+        [data-content]{left:0; transform:none;}
+      }
+}

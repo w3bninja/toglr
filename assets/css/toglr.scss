@@ -1,0 +1,6 @@
+.control{display:inline-block; background:#EEE; padding:10px; transition: all 0.5s ease;
+    &.active{background:#CCC; transition: all 0.5s ease;}
+}
+[data-content]{display:none; opacity:0; transition: all 0.5s ease;
+    &.active{display:block; opacity:1; transition: all 0.5s ease;}
+}

@@ -1,0 +1,6 @@
+//Tray
+.tray{
+    [data-content]{background:#EEE; padding:0; height:0; min-height:0; overflow:hidden; display:block; opacity:1; 
+      &.active{height:50vh; min-height:300px; overflow:auto;}
+    }
+  }

@@ -1,0 +1,17 @@
+.pop{position:relative; display:inline-block;
+    [data-content]{position:absolute;
+      &.active{z-index:1;}
+    }
+    &.pop-left{
+      [data-content]{right:100%; top:0;}
+    }
+    &.pop-right{
+      [data-content]{left:100%; top:0;}
+    }
+    &.pop-top{
+      [data-content]{left:50%; bottom:100%; transform:translateX(-50%);}
+    }
+    &.pop-bottom{
+      [data-content]{left:50%; top:100%; transform:translateX(-50%)}
+    }
+  }

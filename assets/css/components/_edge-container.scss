@@ -1,0 +1,5 @@
+body.open{overflow:hidden;}
+.edge-container{visibility:hidden; display:block; pointer-events:none; position:absolute; left:0; bottom:100%; background:#EEE; z-index:999; width:100%; height:100%; @extend .transition;
+  &.active{visibility:visible; bottom:0; pointer-events:all; @extend .transition;}
+  &.right{}
+}

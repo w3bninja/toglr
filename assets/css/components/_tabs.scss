@@ -1,0 +1,11 @@
+//Tabs
+.tabs{
+    .tab-nav{
+      a{display:inline-block; max-width:200px;}
+    }
+    &.tab-v{display:flex;
+      .tab-nav{
+        a{display:block;}
+      }
+    }
+  }
