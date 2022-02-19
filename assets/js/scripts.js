@@ -142,3 +142,4 @@ $('.control').showhide('.popover',false,false,false,false);
 $('.control').showhide('.drop',false,false,false,false);
 $('.control').showhide('.tooltip',false,false,false,false,'mouseover mouseout');
 $('.modal-control').showhide('body');
+$('.control').showhide('.modal-group');
