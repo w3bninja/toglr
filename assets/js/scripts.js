@@ -1,7 +1,7 @@
 // NOTES
 // - Steps/Wizard - Would need to include sets within other sets
 
-$.fn.showhide = function(group, closeAll, addBody, direction, full, actionType, push) {
+$.fn.toglr = function(group, closeAll, addBody, direction, full, actionType, push) {
   var setGroup = $(group) || $('body');
   var control = $(this);
   var closeAll = closeAll || false;
@@ -133,13 +133,13 @@ $.fn.showhide = function(group, closeAll, addBody, direction, full, actionType, 
   });
 }
 
-$('.edge-control').showhide('body',false,true,'bottom',false,'click',false);
-$('.control').showhide('.accordion',true);
-$('.control').showhide('.tabs',true);
-$('.control').showhide('.tray');
-$('.control').showhide('.slider',true);
-$('.control').showhide('.popover',false,false,false,false);
-$('.control').showhide('.drop',false,false,false,false);
-$('.control').showhide('.tooltip',false,false,false,false,'mouseover mouseout');
-$('.modal-control').showhide('body');
-$('.control').showhide('.modal-group');
+$('.edge-control').toglr('body',false,true,'bottom',false,'click',false);
+$('.control').toglr('.accordion',true);
+$('.control').toglr('.tabs',true);
+$('.control').toglr('.tray');
+$('.control').toglr('.slider',true);
+$('.control').toglr('.popover',false,false,false,false);
+$('.control').toglr('.drop',false,false,false,false);
+$('.control').toglr('.tooltip',false,false,false,false,'mouseover mouseout');
+$('.modal-control').toglr('body');
+$('.control').toglr('.modal-group');

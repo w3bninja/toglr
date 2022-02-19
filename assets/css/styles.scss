@@ -2,12 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;700&display=swap');
 html, body{padding:0; margin:0; font-family: 'Heebo', sans-serif;}
 hr{margin:40px 0;}
-pre{padding:10px; background:#EEE; border-radius:5px; margin-top:5vh;}
+pre{padding:10px; background:#EEE; border-radius:5px;}
 p{max-width:400px;}
+svg{margin-right:40px;}
 
-.container{max-width:1200px; margin:0 auto;}
-.box{padding:40px; margin:20px auto; height:80vh; box-shadow:0 0 10px rgba(0, 0, 0, 0.2);}
+.container{max-width:1000px; margin:0 auto;}
+.box{padding:40px; margin:20px auto; height:80vh; box-shadow:0 0 10px rgba(0, 0, 0, 0.1); border-radius:10px;}
 .navigation{position:fixed; left:0; top:0; display:inline-block;
+  h4{margin:10px 0 0 10px;}
   ul, li{list-style-type:none; margin:0; padding:0;}
   li{
     a{padding:10px; display:block; text-decoration:none;
@@ -24,10 +26,42 @@ p{max-width:400px;}
 
 h1, h2, h3, h4, h5, h6{margin:0; padding:0;}
 h2{padding-bottom:30px;}
-
 h4{padding-bottom:10px;}
+h5{padding-top:10vh;}
 
-.row{display:flex;}
+.row{display:flex; margin-bottom:5vh; border-bottom:1px solid #EEE; padding-bottom:5vh;}
+
+.intro{text-align:center; margin:0 auto; height:50vh; padding:10vh 0 0 0;
+  h1{font-size:3vw; text-transform:uppercase; letter-spacing:3px;}
+  p{max-width:100%; font-size:2em;}
+}
+
+.code-info{background:#EEE; border-radius:5px; padding:20px; margin-bottom:10vh; text-align:center;
+  span{font-weight:bold; position:relative; display:inline-block; margin:0 3px; padding:0 5px;
+    &:after{content:''; border:2px solid #000; position:absolute; left:0; right:0; top:0; bottom:0;}
+  }
+  
+  .tip{position:relative; display:inline-block;
+    &:before{content:attr(title); position:absolute; background:#333; color:#FFF; white-space:nowrap; text-indent:0; padding:5px 10px; text-align:left; border-radius:3px; line-height:normal; font-size:14px; opacity:0; transition: all 0.5s ease;}
+    &:hover{
+      &:before{opacity:1;}
+    }
+    &.top{
+      &:before{bottom:110%; left:50%; transform:translateX(-50%);}
+    }
+    &.left{
+      &:before{top:0; right:100%;}
+    }
+    &.right{
+      &:before{top:0; left:100%;}
+    }
+    &.bottom{
+      &:before{top:110%; left:50%; transform:translateX(-50%);}
+    }
+  }
+}
+
+
 
 @import 
 "base/base",
