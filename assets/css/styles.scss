@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;700&display=swap');
 html, body{padding:0; margin:0; font-family: 'Heebo', sans-serif;}
 hr{margin:40px 0;}
-pre{padding:10px; background:#EEE; border-radius:5px;}
+pre{padding:10px; background:#EEE; border-radius:5px; overflow:auto;}
 p{max-width:400px;}
 svg{margin-right:40px;}
 
@@ -59,6 +59,16 @@ h5{padding-top:10vh;}
       &:before{top:110%; left:50%; transform:translateX(-50%);}
     }
   }
+}
+@media (max-width:767px){
+    body{padding:0 30px;}
+    .intro{height:auto;
+      h1{font-size:50px;}
+    }
+    .navigation{display:none;}
+    .box{height:auto;}
+    .row{display:block;}
+    svg{width:100%;}
 }
 
 

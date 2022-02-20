@@ -10,3 +10,12 @@
         [data-content]{flex-grow:1;}
     }
 }
+
+
+
+
+@media (max-width:767px){
+    .accordion{
+        &.accordion-h{display:block;}
+    }
+}

@@ -10,7 +10,8 @@ hr {
 pre {
   padding: 10px;
   background: #EEE;
-  border-radius: 5px; }
+  border-radius: 5px;
+  overflow: auto; }
 
 p {
   max-width: 400px; }
@@ -169,6 +170,22 @@ h5 {
       -webkit-transform: translateX(-50%);
               transform: translateX(-50%); }
 
+@media (max-width: 767px) {
+  body {
+    padding: 0 30px; }
+  .intro {
+    height: auto; }
+    .intro h1 {
+      font-size: 50px; }
+  .navigation {
+    display: none; }
+  .box {
+    height: auto; }
+  .row {
+    display: block; }
+  svg {
+    width: 100%; } }
+
 .control {
   display: inline-block;
   background: #EEE;
@@ -242,6 +259,10 @@ h5 {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1; }
+
+@media (max-width: 767px) {
+  .accordion.accordion-h {
+    display: block; } }
 
 .tabs .tab-nav a {
   display: inline-block;
