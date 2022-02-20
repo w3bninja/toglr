@@ -27,8 +27,7 @@ svg {
   padding: 40px;
   margin: 20px auto;
   height: 80vh;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px; }
 
 .navigation {
@@ -50,7 +49,6 @@ svg {
       background: #EEE; }
 
 .transition, .accordion .control, .slider [data-content], .edge-container, .edge-container.active, body {
-  -webkit-transition: all 500ms ease;
   transition: all 500ms ease; }
 
 /* X */
@@ -71,13 +69,11 @@ svg {
 
 .x:before {
   right: 100%;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg); }
+  transform: rotate(45deg); }
 
 .x:after {
   right: 100%;
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg); }
+  transform: rotate(135deg); }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -93,8 +89,6 @@ h5 {
   padding-top: 10vh; }
 
 .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-bottom: 5vh;
   border-bottom: 1px solid #EEE;
@@ -149,15 +143,13 @@ h5 {
       line-height: normal;
       font-size: 14px;
       opacity: 0;
-      -webkit-transition: all 0.5s ease;
       transition: all 0.5s ease; }
     .code-info .tip:hover:before {
       opacity: 1; }
     .code-info .tip.top:before {
       bottom: 110%;
       left: 50%;
-      -webkit-transform: translateX(-50%);
-              transform: translateX(-50%); }
+      transform: translateX(-50%); }
     .code-info .tip.left:before {
       top: 0;
       right: 100%; }
@@ -167,45 +159,47 @@ h5 {
     .code-info .tip.bottom:before {
       top: 110%;
       left: 50%;
-      -webkit-transform: translateX(-50%);
-              transform: translateX(-50%); }
+      transform: translateX(-50%); }
+
+.footer {
+  text-align: center; }
 
 @media (max-width: 767px) {
   body {
     padding: 0 30px; }
+
   .intro {
     height: auto; }
     .intro h1 {
       font-size: 50px; }
+
   .navigation {
     display: none; }
+
   .box {
     height: auto; }
+
   .row {
     display: block; }
+
   svg {
     width: 100%; } }
-
 .control {
   display: inline-block;
   background: #EEE;
   padding: 10px;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }
   .control.active {
     background: #CCC;
-    -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease; }
 
 [data-content] {
   display: none;
   opacity: 0;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }
   [data-content].active {
     display: block;
     opacity: 1;
-    -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease; }
 
 .pop, .popover, .tooltip, .drop {
@@ -224,13 +218,11 @@ h5 {
   .pop.pop-top [data-content], .pop-top.popover [data-content], .pop-top.tooltip [data-content], .pop-top.drop [data-content] {
     left: 50%;
     bottom: 100%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%); }
+    transform: translateX(-50%); }
   .pop.pop-bottom [data-content], .pop-bottom.popover [data-content], .pop-bottom.tooltip [data-content], .pop-bottom.drop [data-content] {
     left: 50%;
     top: 100%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%); }
+    transform: translateX(-50%); }
 
 .accordion .control {
   position: relative;
@@ -246,31 +238,21 @@ h5 {
     left: 10px;
     top: 50%; }
   .accordion .control:after {
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg); }
+    transform: rotate(-90deg); }
   .accordion .control.active:after {
     display: none; }
-
 .accordion.accordion-h {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex; }
   .accordion.accordion-h [data-content] {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1; }
+    flex-grow: 1; }
 
 @media (max-width: 767px) {
   .accordion.accordion-h {
     display: block; } }
-
 .tabs .tab-nav a {
   display: inline-block;
   max-width: 200px; }
-
 .tabs.tab-v {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex; }
   .tabs.tab-v .tab-nav a {
     display: block; }
@@ -292,42 +274,34 @@ h5 {
   background: #FFF;
   padding: 10px;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   min-width: 200px; }
 
 .tooltip [data-content] {
   background: #FFF;
   padding: 10px;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   min-width: 200px; }
 
 .drop [data-content] {
   background: #FFF;
   padding: 10px;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   min-width: 200px; }
-
 .drop a {
   display: block;
   padding: 10px;
   border-top: 1px solid rgba(0, 0, 0, 0.1); }
   .drop a:first-child {
     border: 0; }
-
 .drop.pop-top [data-content] {
   left: 0;
-  -webkit-transform: none;
-          transform: none; }
-
+  transform: none; }
 .drop.pop-bottom [data-content] {
   left: 0;
-  -webkit-transform: none;
-          transform: none; }
+  transform: none; }
 
 .slider {
   position: relative;
@@ -493,8 +467,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     min-width: 300px;
     background: #FFF;
     padding: 10px; }
