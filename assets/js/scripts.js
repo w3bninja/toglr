@@ -1,5 +1,6 @@
 // NOTES
 // - Steps/Wizard - Would need to include sets within other sets
+// - Hash Tracking
 
 $.fn.toglr = function(group, closeAll, addBody, direction, full, actionType, push) {
   var setGroup = $(group) || $('body');
