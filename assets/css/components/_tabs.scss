@@ -3,6 +3,7 @@
     .tab-nav{
       a{display:inline-block; max-width:200px;}
     }
+    [data-content]{padding:20px;}
     &.tab-v{display:flex;
       .tab-nav{
         a{display:block;}

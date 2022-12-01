@@ -12,9 +12,8 @@
 <body>
 
 <div class="navigation">
-  <h4>Components</h4>
+  <h4>Examples</h4>
   <ul>
-    <li><a href="#edge-container">Edge Container</a></li>
     <li><a href="#accordion">Accordions</a></li>
     <li><a href="#tabs">Tabs</a></li>
     <li><a href="#tray">Trays</a></li>
@@ -23,72 +22,118 @@
     <li><a href="#tooltip">Tooltip</a></li>
     <li><a href="#modal">Modal</a></li>
     <li><a href="#popover">Popover</a></li>
+    <li><a href="#edge-container">Edge Container</a></li>
   </ul>
 </div>
 <div class="container">
   <div class="intro">
     <h1>Toglr</h1>
-    <p>Toggle visibilty of grouped elements.</p>
-    <div class="code-info">
+    <h2>Many components. One function.</h2>
+    <p>Many components share the common action of showing and hiding the infocus information. By creating a simple yet dynamic function, common and uncommon components can be built by using the same function and adjusting the CSS to get the desired functional outcome.</p>
+
+    <a href="https://github.com/w3bninja/toglr" target="_blank" class="btn btn-primary">Download</a>
+   
+  </div>
+
+  <h2>How it works</h2>
+  <h3>Settings</h3>
+
+
+  <div class="tabs">
+    <div class="code-info tab-nav">
       $(
-        <span class="tip top" title="The selector of each actionable item within the group.">control</span>
+        <a href="#i1" class="tip top control active" title="The selector of each actionable item within the group.">control</a>
         ).toglr(
-        <span class="tip top" title="The selector of each group.">group</span>,
-        <span class="tip top" title="Allow all containers to be closed.">closeAll</span>,
-        <span class="tip top" title="Add active class to the body.">addBody</span>,
-        <span class="tip top" title="Add a direction class of left, right, top or bottom.">direction</span>,
-        <span class="tip top" title="Add a 'full' class.">full</span>,
-        <span class="tip top" title="Adjust the action function trigger.">actionType</span>,
-        <span class="tip top" title="Add 'push' classes based on direction.">push</span>
+        <a href="#i2" class="tip top control" title="The selector of each group.">group</a>,
+        <a href="#i3" class="tip top control" title="Close all except active item.">closeAll</a>,
+        <a href="#i4" class="tip top control" title="Add active class to the body.">addBody</a>,
+        <a href="#i5" class="tip top control" title="Add a direction class of left, right, top or bottom.">direction</a>,
+        <a href="#i6" class="tip top control" title="Add a 'full' class.">full</a>,
+        <a href="#i7" class="tip top control" title="Adjust the action function trigger.">actionType</a>,
+        <a href="#i8" class="tip top control" title="Add 'push' classes based on direction.">push</a>
       );
     </div>
+    <div class="tab-content">
+      <div data-content="i1">
+        <h3>control</h3>
+        The basic structure of each item is identified with a specific class <i>(.control)</i> to trigger the matching items content to show.
+      </div>
+      <div data-content="i2">
+        
+        <div class="row">
+          <div class="col">
+            <h3>group</h3>
+            <p>The default state applies the group setting to the entire page but a group identifier can be applied by using the group setting to create multiples of the same component within a single page. </p>
+          </div>
+          <div class="col">
+            <svg xmlns="http://www.w3.org/2000/svg" width="200.5" height="117" viewBox="0 0 200.5 117">
+              <g id="Group_7" data-name="Group 7" transform="translate(-45.5 -53)">
+                <g id="Group_5" data-name="Group 5" transform="translate(56 53)">
+                  <g id="Rectangle_1" data-name="Rectangle 1" fill="#fff" stroke="#ccc" stroke-width="1">
+                    <rect width="190" height="117" stroke="none"/>
+                    <rect x="0.5" y="0.5" width="189" height="116" fill="none"/>
+                  </g>
+                  <g id="Group_8" data-name="Group 8" transform="translate(16 15)">
+                    <g id="Group_1" data-name="Group 1">
+                      <rect id="Rectangle_2" data-name="Rectangle 2" width="74" height="38" rx="5" fill="#eee"/>
+                      <text id="Item" transform="translate(22 25)" font-size="14" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">ITEM</tspan></text>
+                    </g>
+                    <g id="Group_2" data-name="Group 2" transform="translate(83)">
+                      <rect id="Rectangle_2-2" data-name="Rectangle 2" width="76" height="38" rx="5" fill="#eee"/>
+                      <text id="Item-2" data-name="Item" transform="translate(23 25)" font-size="14" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">ITEM</tspan></text>
+                    </g>
+                    <g id="Group_3" data-name="Group 3" transform="translate(0 47)">
+                      <rect id="Rectangle_2-3" data-name="Rectangle 2" width="74" height="38" rx="5" fill="#eee"/>
+                      <text id="Item-3" data-name="Item" transform="translate(22 25)" font-size="14" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">ITEM</tspan></text>
+                    </g>
+                    <g id="Group_4" data-name="Group 4" transform="translate(82.886 47)">
+                      <rect id="Rectangle_2-4" data-name="Rectangle 2" width="76" height="38" rx="5" transform="translate(0.114)" fill="#eee"/>
+                      <text id="Item-4" data-name="Item" transform="translate(23.114 25)" font-size="14" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">ITEM</tspan></text>
+                    </g>
+                  </g>
+                </g>
+                <rect id="Rectangle_3" data-name="Rectangle 3" width="76" height="17" transform="translate(49.5 149.5) rotate(-90)" fill="#fff"/>
+                <text id="Group" transform="translate(62.5 143.5) rotate(-90)" font-size="16" font-family="SegoeUI-Bold, Segoe UI" font-weight="700" letter-spacing="0.118em"><tspan x="0" y="0">GROUP</tspan></text>
+              </g>
+            </svg>      
+          </div>
+          
+        </div>
+
+      </div>
+      <div data-content="i3">
+        <h3>closeAll</h3>
+        This setting will set all items to closed except the active item. This can be set to true to always have a single item in the group open or set to false to allow multiple items to be set to active at the same time.
+      </div>
+      <div data-content="i4">
+        <h3>addBody</h3>
+        This setting adds an active class to the body in case the component being used needs to make adjustments to the body when active.
+      </div>
+      <div data-content="i5">
+        <h3>direction</h3>
+        This setting adds the direction provided to the body.
+      </div>
+      <div data-content="i6">
+        <h3>full</h3>
+        This setting adds a class name of 'full' to the body in the case that the component needs an aditional setting to fill the screen.
+      </div>
+      <div data-content="i7">
+        <h3>actionType</h3>
+        This setting is used to adjust the action used to trigger the function. It works using jQuery syntax.
+      </div>
+      <div data-content="i8">
+        <h3>push</h3>
+        This setting adds a class name of 'push' to the body in the case that the component needs an aditional setting to push the body when active.
+      </div>
+    </div>
   </div>
+  
+  <hr>
   
   <div class="row">
     <div class="col">
-      <svg xmlns="http://www.w3.org/2000/svg" width="200.5" height="117" viewBox="0 0 200.5 117">
-        <g id="Group_7" data-name="Group 7" transform="translate(-45.5 -53)">
-          <g id="Group_5" data-name="Group 5" transform="translate(56 53)">
-            <g id="Rectangle_1" data-name="Rectangle 1" fill="#fff" stroke="#ccc" stroke-width="1">
-              <rect width="190" height="117" stroke="none"/>
-              <rect x="0.5" y="0.5" width="189" height="116" fill="none"/>
-            </g>
-            <g id="Group_8" data-name="Group 8" transform="translate(16 15)">
-              <g id="Group_1" data-name="Group 1">
-                <rect id="Rectangle_2" data-name="Rectangle 2" width="74" height="38" rx="5" fill="#eee"/>
-                <text id="Item" transform="translate(22 25)" font-size="14" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">ITEM</tspan></text>
-              </g>
-              <g id="Group_2" data-name="Group 2" transform="translate(83)">
-                <rect id="Rectangle_2-2" data-name="Rectangle 2" width="76" height="38" rx="5" fill="#eee"/>
-                <text id="Item-2" data-name="Item" transform="translate(23 25)" font-size="14" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">ITEM</tspan></text>
-              </g>
-              <g id="Group_3" data-name="Group 3" transform="translate(0 47)">
-                <rect id="Rectangle_2-3" data-name="Rectangle 2" width="74" height="38" rx="5" fill="#eee"/>
-                <text id="Item-3" data-name="Item" transform="translate(22 25)" font-size="14" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">ITEM</tspan></text>
-              </g>
-              <g id="Group_4" data-name="Group 4" transform="translate(82.886 47)">
-                <rect id="Rectangle_2-4" data-name="Rectangle 2" width="76" height="38" rx="5" transform="translate(0.114)" fill="#eee"/>
-                <text id="Item-4" data-name="Item" transform="translate(23.114 25)" font-size="14" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">ITEM</tspan></text>
-              </g>
-            </g>
-          </g>
-          <rect id="Rectangle_3" data-name="Rectangle 3" width="76" height="17" transform="translate(49.5 149.5) rotate(-90)" fill="#fff"/>
-          <text id="Group" transform="translate(62.5 143.5) rotate(-90)" font-size="16" font-family="SegoeUI-Bold, Segoe UI" font-weight="700" letter-spacing="0.118em"><tspan x="0" y="0">GROUP</tspan></text>
-        </g>
-      </svg>      
-    </div>
-    <div class="col">
-      <h3>Grouping</h3>
-      <p>Items can be grouped based on a specific container or the full page.</p>
-    </div>
-  </div>
-  
- 
-  
-  <div class="row">
-    <div class="col">
-      <h3>Controls</h3>
-      <p>Each item works with a link that targets the matching container within the group. Each link, Expand, Collapse, Next and Previous are controls that can be used based on the type of component being created.</p>
+      <h3>Additional Controls</h3>
+      <p> Expand, Collapse, Next and Previous are controls that can be used based on the type of component being created. The data-nav and data-control values need to match.</p>
       <svg xmlns="http://www.w3.org/2000/svg" width="538" height="38" viewBox="0 0 538 38">
         <g id="Group_13" data-name="Group 13" transform="translate(-73 -72)">
           <g id="Group_9" data-name="Group 9" transform="translate(73 72)">
@@ -117,23 +162,11 @@
       <pre>data-control="[group-control-name]"</pre>
     </div>
   </div>
-  <h2>Components</h2>
+  
+  
+  <h2>Example Components</h2>
 </div>
-<div class="container box">
-  <h3 id="edge-container">Edge Container</h3>
-  <a href="#e1" class="edge-control">open1</a>
-  <div class="edge-container" data-content="e1">
-    <a href="#e1" class="edge-control x"></a>
-    menu1
-  </div>
-  <a href="#e2" class="edge-control">open2</a>
-  <div class="edge-container" data-content="e2">
-    <a href="#e2" class="edge-control x"></a>
-    menu2
-  </div>
-  <h5>Code:</h5>
-  <pre>$('.edge-control').showhide('body',false,true,'bottom',false,'click',false);</pre>
-</div>
+
 
 
 <div class="container box">
@@ -376,7 +409,21 @@
     <h5>Code:</h5>
     <pre>$('.control').showhide('.popover',false,false,false,false);</pre>
 </div>
-
+<div class="container box">
+  <h3 id="edge-container">Edge Container</h3>
+  <a href="#e1" class="edge-control">open1</a>
+  <div class="edge-container" data-content="e1">
+    <a href="#e1" class="edge-control x"></a>
+    menu1
+  </div>
+  <a href="#e2" class="edge-control">open2</a>
+  <div class="edge-container" data-content="e2">
+    <a href="#e2" class="edge-control x"></a>
+    menu2
+  </div>
+  <h5>Code:</h5>
+  <pre>$('.edge-control').showhide('body',false,true,'bottom',false,'click',false);</pre>
+</div>
     
 <div class="footer">
     <a href="https://github.com/w3bninja/toglr" target="_blank">
