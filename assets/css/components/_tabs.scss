@@ -3,8 +3,11 @@
     .tab-nav{
       a{display:inline-block; max-width:200px;}
     }
-    [data-content]{padding:20px;}
-    &.tab-v{display:flex;
+    .tab-content{ flex-grow:1; border:1px solid #EEE;
+      [data-content]{padding:20px;}
+    }
+    
+    &.tab-v{display:flex; width:100%;
       .tab-nav{
         a{display:block;}
       }
