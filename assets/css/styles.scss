@@ -1,20 +1,43 @@
 //DEMO
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;700&display=swap');
-html, body{padding:0; margin:0; font-family: 'Heebo', sans-serif;}
+html, body{padding:0; margin:0; font-family: 'Heebo', sans-serif; scroll-behavior: smooth;}
 hr{margin:10vh 0; border:0; height:1px; background:#EEE;}
 pre{padding:10px; background:#EEE; border-radius:5px; overflow:auto;}
 p{max-width:1200px;}
 
+.logo{max-width:200px; padding:20px; line-height:0;
+	svg{width:100%; height:auto;}
+}
+
+img{width:100%;}
+.container-full{max-width:1600px; margin:0 auto;}
+.container-wide{max-width:1400px; margin:0 auto;
+	.col-2{width:25%;}
+	.col-3{width:33.333%;}
+	.col-9{width:66.666%;}
+	.col-10{width:75%;}
+}
 .container{max-width:1000px; margin:0 auto;}
 .box{padding:40px; margin:0 auto; margin-bottom:10vh; box-shadow:0 0 10px rgba(0, 0, 0, 0.1); border-radius:10px;}
-.navigation{position:fixed; left:0; top:0; display:inline-block;
+.navigation{position:sticky; left:0; top:130px; display:inline-block; scroll-target-group: auto;
   h4{margin:10px 0 0 10px;}
   ul, li{list-style-type:none; margin:0; padding:0;}
   li{
-    a{padding:10px; display:block; text-decoration:none;
+    a{padding:10px 30px; display:block; text-decoration:none; border-radius:0 30px 30px 0;
       &:hover{background:#EEE;}
     }
   }
+	a {color: #000; text-decoration: none; transition:all ease 0.5s;
+		&:target-current {
+			color: inherit;
+			text-decoration-skip-ink: all;
+			text-decoration-thickness: 2px;
+			font-weight: bold;
+			background:#000; color:#FFF;
+			border-radius:0 30px 30px 0;
+			&:hover{background:#333; color:#FFF;}
+		}
+	}
 }
 .transition{transition:all 500ms ease;}
 /* X */
@@ -29,13 +52,14 @@ h3{font-size:1.5em; font-weight:normal;}
 h4{padding-bottom:10px;}
 h5{padding-top:10vh;}
 
-.row{display:flex; margin-bottom:5vh; padding-bottom:5vh;}
-
-.intro{text-align:center; margin:0 auto; min-height:80vh; padding:10vh 0 0 0;
-  h1{font-size:3vw; text-transform:uppercase; letter-spacing:3px; margin-bottom:5vh;}
-  p{margin:5vh auto;}
+.row{display:flex; margin-bottom:5vh; padding-bottom:5vh; gap:40px;
+	.v-center{align-items: center;}
 }
 
+.intro{margin:0 auto; min-height:80vh; padding:10vh 0 0 0;
+  h1{font-size:3vw; text-transform:uppercase; letter-spacing:3px; margin-bottom:5vh;}
+}
+.step{padding:40px; text-align:center;}
 .code-info{background:#EEE; border-radius:5px; padding:20px; margin:2vh 0; text-align:center;
   a{font-weight:bold; position:relative; display:inline-block; margin:0 3px; padding:0 5px; text-decoration:none; color:#000;
     &:after{content:''; border:2px solid #000; position:absolute; left:0; right:0; top:0; bottom:0;}
@@ -70,6 +94,44 @@ h5{padding-top:10vh;}
 }
 
 .footer{text-align:center;}
+
+.site-header {
+  --_animationStartsAfter: 50px;
+  --_animationDistance: 50px;
+  --_surfaceColorStart:  rgba(255, 255, 255, 0);
+  --_surfaceColorEnd: rgba(255, 255, 255, 1);
+  --_textColorStart: hsl(0 10% 90%);
+  --_textColorEnd: hsl(0 10% 10%);
+
+
+
+  background-color: var(--_surfaceColorStart);
+
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  animation: stickyNav linear forwards;
+
+  @supports (animation-timeline: view()) {
+    animation-timeline: view();
+    animation-range-start: calc(100vh + var(--_animationStartsAfter));
+    animation-range-end: calc(
+      100vh + var(--_animationStartsAfter) + var(--_animationDistance)
+    );
+  }
+
+
+
+}
+
+@keyframes stickyNav {
+  100% {
+    color: var(--_textColorEnd);
+    background-color: var(--_surfaceColorEnd);
+    box-shadow: 0 0 0.75rem hsl(0 0% 0% / 0.3);
+  }
+}
+
 
 @media (max-width:767px){
     body{padding:0 30px;}
